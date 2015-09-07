@@ -5,7 +5,7 @@ import java.util.List;
 import javaweb.user.model.User;
 
 public interface UserDao {
-
+	
 	User getUser(String username);
 	
 	void addUser(User user);

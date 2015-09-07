@@ -17,8 +17,7 @@ import javaweb.user.model.User;
  */
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
 	 * @see javaweb.user.dao.UserDao#getUser(java.lang.String)
 	 */
@@ -36,8 +35,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return null;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
 	 * @see javaweb.user.dao.UserDao#findAllUser()
 	 */
@@ -49,8 +47,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return users;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
 	 * @see javaweb.user.dao.UserDao#isExist(java.lang.String)
 	 */
@@ -66,26 +63,26 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return true;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
 	 * @see javaweb.user.dao.UserDao#saveUser(javaweb.user.model.User)
 	 */
 	@Override
 	public void addUser(User user) {
-		user.setCreateDate(new Date());
-		user.setUpdateDate(new Date());
+		user.setCreatedDate(new Date());
+		user.setUpdatedDate(new Date());
 		user.setDelFlg(0);
 		getHibernateTemplate().save(user);
 	}
 
-	/* (non-Javadoc)
+	/**
+	 * 
 	 * @see javaweb.user.dao.UserDao#updateUser(javaweb.user.model.User)
 	 */
 	@Override
 	public void updateUser(User user) {
 
-		user.setUpdateDate(new Date());
+		user.setUpdatedDate(new Date());
 		getHibernateTemplate().save(user);
 	}
 }

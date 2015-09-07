@@ -21,7 +21,8 @@ http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
  
     <property name="mappingResources">
 	<list>
-          <value>javaweb3/customer/hibernate/Customer.hbm.xml</value>
+          <value>javaweb/customer/hibernate/Customer.hbm.xml</value>
+          <value>javaweb/user/hibernate/User.hbm.xml</value>
 	</list>
      </property>	
  

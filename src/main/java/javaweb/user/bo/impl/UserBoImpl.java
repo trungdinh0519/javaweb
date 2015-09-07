@@ -9,7 +9,17 @@ import javaweb.utils.StringUtils;
 
 public class UserBoImpl implements UserBo {
 
-	private UserDao userDao;
+	protected UserDao userDao;
+
+	/**
+	 * 
+	 * @see javaweb.user.dao.UserDao#setUserDao(javaweb.user.dao.UserDao)
+	 */
+	@Override
+	public void setUserDao(UserDao userDao) {
+		// TODO Auto-generated method stub
+		this.userDao = userDao;
+	}
 
 	@Override
 	public boolean signin(User user) {

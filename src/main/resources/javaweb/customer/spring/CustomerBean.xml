@@ -5,12 +5,12 @@
            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
    	<bean id="customerBo" 
-                class="javaweb3.customer.bo.impl.CustomerBoImpl" >
+                class="javaweb.customer.bo.impl.CustomerBoImpl" >
    		<property name="customerDao" ref="customerDao" />
    	</bean>
  
    	<bean id="customerDao" 
-                class="javaweb3.customer.dao.impl.CustomerDaoImpl" >
+                class="javaweb.customer.dao.impl.CustomerDaoImpl" >
    		<property name="sessionFactory" ref="sessionFactory"></property>
    	</bean>
 

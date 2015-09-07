@@ -3,8 +3,8 @@
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="javaweb3.user.model.User" 
-        table="user" catalog="javaweb3">
+    <class name="javaweb.user.model.User" 
+        table="user" catalog="javaweb">
 
         <id name="username" type="string">
             <column name="username" length="60" not-null="true"/>

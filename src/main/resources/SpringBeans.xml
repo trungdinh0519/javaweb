@@ -8,6 +8,6 @@ http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 	<import resource="config/database/spring/HibernateSessionFactory.xml"/>
  
 	<!-- Beans Declaration -->
-	<import resource="javaweb3/customer/spring/CustomerBean.xml"/>
-	
+	<import resource="javaweb/customer/spring/CustomerBean.xml"/>
+	<import resource="javaweb/user/spring/UserBean.xml"/>
 </beans>
