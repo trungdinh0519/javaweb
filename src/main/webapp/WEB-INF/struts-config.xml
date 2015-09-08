@@ -6,55 +6,51 @@
 <struts-config>
 
     <form-beans>
-        <form-bean name="customerForm"
-                   type="javaweb.customer.form.CustomerForm"/>
+        <form-bean name="customerForm" type="javaweb.customer.form.CustomerForm"/>
 
-        <form-bean name="dynaCustomerListForm"
-                   type="org.apache.struts.action.DynaActionForm">
+        <form-bean name="dynaCustomerListForm" type="org.apache.struts.action.DynaActionForm">
             <form-property name="customerList" type="java.util.List"/>
         </form-bean>
+        <form-bean name="signinForm" type="javaweb.user.form.SigninForm"/>
 
     </form-beans>
     <global-forwards>
-    	<forward name="welcome" path="/Welcome.do"></forward>
+        <forward name="welcome" path="/Welcome.do"></forward>
+        <forward name="signin" path="/Signin.do"></forward>
     </global-forwards>
 
     <action-mappings>
-		<action path="/Welcome" forward="/pages/Welcome.jsp"/>
-		
-        <action
-                path="/AddCustomerPage"
-                type="org.apache.struts.actions.ForwardAction"
+        <action path="/Welcome" forward="/pages/Welcome.jsp"/>
+        <action path="/Signin" forward="/pages/user/signin.jsp"/>
+
+        <action path="/SigninCheck" name="signinForm"
+                type="javaweb.user.action.SigninAction" input="/pages/user/signin.jsp">
+            <forward name="sucess" path="/Welcome.do"></forward>
+
+        </action>
+
+        <action path="/AddCustomerPage" type="org.apache.struts.actions.ForwardAction"
                 parameter="/pages/customer/add_customer.jsp"/>
 
-        <action
-                path="/AddCustomer"
-                type="javaweb.customer.action.AddCustomerAction"
-                name="customerForm"
-                validate="true"
-                input="/pages/customer/add_customer.jsp"
-                >
+        <action path="/AddCustomer" type="javaweb.customer.action.AddCustomerAction"
+                name="customerForm" validate="true" input="/pages/customer/add_customer.jsp">
 
             <forward name="success" redirect="true" path="/ListCustomer.do"/>
         </action>
 
-        <action
-                path="/ListCustomer"
-                type="javaweb.customer.action.ListCustomerAction"
-                name="dynaCustomerListForm"
-                >
+        <action path="/ListCustomer" type="javaweb.customer.action.ListCustomerAction"
+                name="dynaCustomerListForm">
 
             <forward name="success" path="/pages/customer/list_customer.jsp"/>
         </action>
     </action-mappings>
 
-    <message-resources
-            parameter="javaweb.customer.properties.Customer"/>
+    <message-resources parameter="javaweb.customer.properties.Customer" key="customer"/>
+    <message-resources parameter="javaweb.user.properties.User" key="user"/>
 
     <!-- Spring Struts plugin -->
     <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
-        <set-property property="contextConfigLocation"
-                      value="/WEB-INF/classes/SpringBeans.xml"/>
+        <set-property property="contextConfigLocation" value="/WEB-INF/classes/SpringBeans.xml"/>
     </plug-in>
 
 </struts-config>

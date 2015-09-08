@@ -14,7 +14,7 @@
 
 <div style="padding:16px">
 	<div style="float:left;width:100px;">
-		<bean:message key="customer.label.name" /> : 
+		<bean:message key="customer.label.name"  bundle="customer" /> : 
 	</div> 
  
 	<html:text property="name" size="40" maxlength="20"/>
@@ -22,7 +22,7 @@
 
 <div style="padding:16px">
 	<div style="float:left;width:100px;">
-		<bean:message key="customer.label.address" /> : 
+		<bean:message key="customer.label.address" bundle="customer"/> : 
 	</div> 
  
 	<html:textarea property="address" cols="50" rows="10"/>
@@ -31,11 +31,11 @@
 <div style="padding:16px">
 	<div style="float:left;padding-right:8px;">
 		<html:submit>
-             <bean:message key="customer.label.button.submit" />
+             <bean:message key="customer.label.button.submit" bundle="customer"/>
         </html:submit>
 	</div>
 	<html:reset>
-          <bean:message key="customer.label.button.reset" />
+          <bean:message key="customer.label.button.reset" bundle="customer"/>
      </html:reset>
 </div>
  

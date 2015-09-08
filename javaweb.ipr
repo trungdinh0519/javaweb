@@ -27,6 +27,9 @@
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
@@ -265,15 +268,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-beanutils:commons-beanutils:1.7.0">
+    <library name="Maven: commons-beanutils:commons-beanutils:1.8.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: commons-chain:commons-chain:1.2">
@@ -298,15 +301,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: commons-digester:commons-digester:1.8">
+    <library name="Maven: commons-digester:commons-digester:2.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/1.8/commons-digester-1.8.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.0/commons-digester-2.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/1.8/commons-digester-1.8-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.0/commons-digester-2.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/1.8/commons-digester-1.8-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.0/commons-digester-2.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: commons-fileupload:commons-fileupload:1.0">
@@ -342,6 +345,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-validator/commons-validator/1.3.1/commons-validator-1.3.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: crimson:crimson:1.1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/crimson/crimson/1.1.3/crimson-1.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/crimson/crimson/1.1.3/crimson-1.1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/crimson/crimson/1.1.3/crimson-1.1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: dom4j:dom4j:1.6.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
@@ -353,15 +367,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.servlet:servlet-api:2.4">
+    <library name="Maven: javax.servlet:servlet-api:2.3">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.4/servlet-api-2.4-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.4/servlet-api-2.4-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: javax.transaction:jta:1.1">
@@ -373,6 +387,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/transaction/jta/1.1/jta-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml:jaxp-api:1.4.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/jaxp-api/1.4.2/jaxp-api-1.4.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/jaxp-api/1.4.2/jaxp-api-1.4.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/jaxp-api/1.4.2/jaxp-api-1.4.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: jstl:jstl:1.2">
