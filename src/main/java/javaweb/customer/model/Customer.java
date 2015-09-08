@@ -3,43 +3,45 @@ package javaweb.customer.model;
 import java.util.Date;
 
 public class Customer implements java.io.Serializable {
-	
-	/** serialVersionUID */
-	private static final long serialVersionUID = 1L;
-	private long customerId;
-	private String name;
-	private String address;
-	private Date createdDate;
 
-	public long getCustomerId() {
-		return customerId;
-	}
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 1L;
+    private long customerId;
+    private String name;
+    private String address;
+    private Date createdDate;
 
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
-	}
+    public long getCustomerId() {
+        return customerId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public Date getCreatedDate() {
-		return createdDate;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
-	}
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
 }

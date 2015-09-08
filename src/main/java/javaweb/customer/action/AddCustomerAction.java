@@ -14,23 +14,23 @@ import javaweb.customer.form.CustomerForm;
 import javaweb.customer.model.Customer;
 
 public class AddCustomerAction extends BaseAction {
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+                                 HttpServletResponse response) throws Exception {
 
-		logger.info("Get Business Object.");
-		
-		CustomerBo customerBo = (CustomerBo) getWebApplicationContext().getBean("customerBo");
+        logger.info("Get Business Object.");
 
-		CustomerForm customerForm = (CustomerForm) form;
-		Customer customer = new Customer();
+        CustomerBo customerBo = (CustomerBo) getWebApplicationContext().getBean("customerBo");
 
-		// copy customerform to model
-		BeanUtils.copyProperties(customer, customerForm);
+        CustomerForm customerForm = (CustomerForm) form;
+        Customer customer = new Customer();
 
-		// save it
-		customerBo.addCustomer(customer);
+        // copy customerform to model
+        BeanUtils.copyProperties(customer, customerForm);
 
-		return mapping.findForward("success");
+        // save it
+        customerBo.addCustomer(customer);
 
-	}
+        return mapping.findForward("success");
+
+    }
 }

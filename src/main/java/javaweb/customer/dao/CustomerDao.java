@@ -5,8 +5,8 @@ import java.util.List;
 import javaweb.customer.model.Customer;
 
 public interface CustomerDao {
-	
-	void addCustomer(Customer customer);
-	
-	List<Customer> findAllCustomer();
+
+    void addCustomer(Customer customer);
+
+    List<Customer> findAllCustomer();
 }

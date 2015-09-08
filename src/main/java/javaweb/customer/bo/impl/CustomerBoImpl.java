@@ -6,21 +6,21 @@ import javaweb.customer.bo.CustomerBo;
 import javaweb.customer.dao.CustomerDao;
 import javaweb.customer.model.Customer;
 
-public class CustomerBoImpl implements CustomerBo{
-	CustomerDao customerDao;
+public class CustomerBoImpl implements CustomerBo {
+    CustomerDao customerDao;
 
-	public void setCustomerDao(CustomerDao customerDao) {
-		this.customerDao = customerDao;
-	}
+    public void setCustomerDao(CustomerDao customerDao) {
+        this.customerDao = customerDao;
+    }
 
-	public void addCustomer(Customer customer) {
+    public void addCustomer(Customer customer) {
 
-		customerDao.addCustomer(customer);
+        customerDao.addCustomer(customer);
 
-	}
+    }
 
-	public List<Customer> findAllCustomer() {
+    public List<Customer> findAllCustomer() {
 
-		return customerDao.findAllCustomer();
-	}
+        return customerDao.findAllCustomer();
+    }
 }

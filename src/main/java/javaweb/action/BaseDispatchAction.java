@@ -13,22 +13,24 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class BaseDispatchAction extends DispatchAction {
-	protected Log log = LogFactory.getLog(this.getClass());
+    protected Log log = LogFactory.getLog(this.getClass());
 
-	protected ApplicationContext ctx;
-	
-	public ApplicationContext getApplicationContext() {
-		if(ctx==null)
-			ctx=WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
-		
-		return ctx;
-	}
-	public Object getBean(String name){
-		if(ctx==null)
-		ctx=WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
-		return ctx.getBean(name);
-	}
-	public ActionForward execute(ActionMapping arg0, ActionForm arg1, HttpServletRequest arg2, HttpServletResponse arg3) throws Exception {
-		return super.execute(arg0, arg1, arg2, arg3);
-	}
+    protected ApplicationContext ctx;
+
+    public ApplicationContext getApplicationContext() {
+        if (ctx == null)
+            ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
+
+        return ctx;
+    }
+
+    public Object getBean(String name) {
+        if (ctx == null)
+            ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
+        return ctx.getBean(name);
+    }
+
+    public ActionForward execute(ActionMapping arg0, ActionForm arg1, HttpServletRequest arg2, HttpServletResponse arg3) throws Exception {
+        return super.execute(arg0, arg1, arg2, arg3);
+    }
 }

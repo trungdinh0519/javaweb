@@ -16,18 +16,19 @@ import javaweb.customer.model.Customer;
 
 
 public class ListCustomerAction extends BaseAction {
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
 
-		CustomerBo customerBo = (CustomerBo) getWebApplicationContext().getBean("customerBo");
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+                                 HttpServletResponse response) throws Exception {
 
-		DynaActionForm dynaCustomerListForm = (DynaActionForm) form;
+       // CustomerBo customerBo = (CustomerBo) getWebApplicationContext().getBean("customerBo");
 
-		List<Customer> list = customerBo.findAllCustomer();
+       // DynaActionForm dynaCustomerListForm = (DynaActionForm) form;
 
-		dynaCustomerListForm.set("customerList", list);
+      //  List<Customer> list = customerBo.findAllCustomer();
 
-		return mapping.findForward("success");
+      //  dynaCustomerListForm.set("customerList", list);
 
-	}
+        return mapping.findForward("success");
+
+    }
 }

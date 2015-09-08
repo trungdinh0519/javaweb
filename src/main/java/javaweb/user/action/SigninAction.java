@@ -11,24 +11,24 @@ import javaweb.action.BaseAction;
 import javaweb.user.bo.UserBo;
 
 public class SigninAction extends BaseAction {
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+                                 HttpServletResponse response) throws Exception {
 
-		logger.info("signin action process ");
-		
-		UserBo userBo = (UserBo) getWebApplicationContext().getBean("userBo");
+        logger.info("signin action process ");
 
-		//CustomerForm customerForm = (CustomerForm) form;
-		//Customer customer = new Customer();
+        UserBo userBo = (UserBo) getWebApplicationContext().getBean("userBo");
 
-		
-		// copy customerform to model
-		//BeanUtils.copyProperties(customer, customerForm);
+        //CustomerForm customerForm = (CustomerForm) form;
+        //Customer customer = new Customer();
 
-		// save it
-		//customerBo.addCustomer(customer);
 
-		return mapping.findForward("success");
+        // copy customerform to model
+        //BeanUtils.copyProperties(customer, customerForm);
 
-	}
+        // save it
+        //customerBo.addCustomer(customer);
+
+        return mapping.findForward("success");
+
+    }
 }

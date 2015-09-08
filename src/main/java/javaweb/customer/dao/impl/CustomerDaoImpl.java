@@ -10,18 +10,18 @@ import javaweb.customer.model.Customer;
 
 public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao {
 
-	@Override
-	public void addCustomer(Customer customer) {
-		customer.setCreatedDate(new Date());
-		getHibernateTemplate().save(customer);
+    @Override
+    public void addCustomer(Customer customer) {
+        customer.setCreatedDate(new Date());
+        getHibernateTemplate().save(customer);
 
-	}
+    }
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Customer> findAllCustomer() {
-		
-		return ((List<Customer>)getHibernateTemplate().find("from Customer"));
-	}
+    @SuppressWarnings("unchecked")
+    @Override
+    public List<Customer> findAllCustomer() {
+
+        return ((List<Customer>) getHibernateTemplate().find("from Customer"));
+    }
 
 }

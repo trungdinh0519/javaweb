@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package javaweb.action;
 
@@ -13,22 +13,21 @@ import org.springframework.web.struts.ActionSupport;
 
 /**
  * @author admin
- *
  */
 public abstract class ResultBasedAction extends ActionSupport {
 
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-		Result result = (Result) execute(mapping, form, request);
-		if (result == null) {
-			throw new Exception("Result expected.");
-		}
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+                                 HttpServletResponse response) throws Exception {
+        Result result = (Result) execute(mapping, form, request);
+        if (result == null) {
+            throw new Exception("Result expected.");
+        }
 
-		result.applyResult(request, response);
-		
-		// Finally, we don't want Struts to execute the forward
-		return null;
-	}
+        result.applyResult(request, response);
 
-	public abstract Result execute(ActionMapping mapping, ActionForm form, HttpServletRequest request) throws Exception;
+        // Finally, we don't want Struts to execute the forward
+        return null;
+    }
+
+    public abstract Result execute(ActionMapping mapping, ActionForm form, HttpServletRequest request) throws Exception;
 }

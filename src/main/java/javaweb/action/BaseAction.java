@@ -13,25 +13,25 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.struts.ActionSupport;
 
 public class BaseAction extends ActionSupport {
-	protected Logger logger = LoggerFactory.getLogger(getClass());
+    protected Logger logger = LoggerFactory.getLogger(getClass());
 
-	protected ApplicationContext ctx;
+    protected ApplicationContext ctx;
 
-	public ApplicationContext getApplicationContext() {
-		if (ctx == null)
-			ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
+    public ApplicationContext getApplicationContext() {
+        if (ctx == null)
+            ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
 
-		return ctx;
-	}
+        return ctx;
+    }
 
-	public Object getBean(String name) {
-		if (ctx == null)
-			ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
-		return ctx.getBean(name);
-	}
+    public Object getBean(String name) {
+        if (ctx == null)
+            ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(servlet.getServletContext());
+        return ctx.getBean(name);
+    }
 
-	public ActionForward execute(ActionMapping arg0, ActionForm arg1, HttpServletRequest arg2, HttpServletResponse arg3)
-			throws Exception {
-		return super.execute(arg0, arg1, arg2, arg3);
-	}
+    public ActionForward execute(ActionMapping arg0, ActionForm arg1, HttpServletRequest arg2, HttpServletResponse arg3)
+            throws Exception {
+        return super.execute(arg0, arg1, arg2, arg3);
+    }
 }
